@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7ead8" />
+  <title>Little Cozy RPS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Little Cozy RPS home"><span class="brand-icon">☁</span> little cozy games</a>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">♫ Sound: Off</button>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow">A LITTLE BREAK, JUST FOR YOU</div>
+      <h1>Rock, Paper,<br><span>Scissors!</span></h1>
+      <p class="subtitle">A tiny game, a warm cup of tea, and a moment to play.</p>
+      <div class="cloud cloud-one">✦</div><div class="cloud cloud-two">✿</div>
+    </section>
+
+    <section class="scoreboard" aria-label="Score">
+      <div class="score-card"><span class="score-label">YOU</span><strong id="playerScore">0</strong></div>
+      <div class="round-label"><span>ROUND</span><strong id="roundCount">1</strong></div>
+      <div class="score-card"><span class="score-label">COMPUTER</span><strong id="computerScore">0</strong></div>
+    </section>
+
+    <section class="arena">
+      <div class="arena-heading">
+        <span class="sparkle">✧</span>
+        <h2 id="statusTitle">Ready when you are!</h2>
+        <p id="statusText">Choose your hand to start the game.</p>
+      </div>
+
+      <div class="battlefield">
+        <div class="player-side">
+          <div class="avatar avatar-player">☺</div>
+          <span class="side-name">YOU</span>
+          <div class="choice-display" id="playerChoice">?</div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="computer-side">
+          <div class="avatar avatar-computer">☻</div>
+          <span class="side-name">COZY BOT</span>
+          <div class="choice-display" id="computerChoice">?</div>
+        </div>
+      </div>
+
+      <div class="choice-prompt">MAKE YOUR MOVE</div>
+      <div class="choices" role="group" aria-label="Choose rock, paper or scissors">
+        <button class="choice-btn" data-choice="rock" type="button">
+          <span class="choice-emoji">🪨</span><span>Rock</span>
+        </button>
+        <button class="choice-btn" data-choice="paper" type="button">
+          <span class="choice-emoji">📜</span><span>Paper</span>
+        </button>
+        <button class="choice-btn" data-choice="scissors" type="button">
+          <span class="choice-emoji">✂️</span><span>Scissors</span>
+        </button>
+      </div>
+      <div class="result-pill" id="resultPill" aria-live="polite">Your turn ✨</div>
+    </section>
+
+    <section class="bottom-row">
+      <div class="tip-card"><span>🍵</span><div><strong>Cozy tip</strong><p>Take your time. There's no rush here.</p></div></div>
+      <button class="reset-btn" id="resetBtn" type="button">↻ &nbsp; New game</button>
+    </section>
+    <footer>MADE FOR SLOW MOMENTS <span>✿</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
